@@ -1,0 +1,66 @@
+.btn {
+  color: #fff;
+  text-transform: capitalize;
+  margin: .5rem;
+  display: inline-block;
+  cursor: pointer;
+  &:extend(.animate);
+  &.primary {
+    background-color: @primaryColor;
+    &:hover {
+      background-color: darken(@primaryColor, 10%);
+    }
+  }
+  &.secondary {
+    background-color: @blue;
+    &:hover {
+      background-color: darken(@blue, 10%);
+    }
+  }
+  &.icons{
+    text-transform: none;
+  }
+  &.lg {
+    font-size: @fontSizeH5;
+    padding: @fontSizeH5/5 @fontSizeH5;
+    &.icons,
+    .icons  {
+      font-size: @fontSizeH5*.9;
+      padding: @fontSizeH5/2;
+    }
+  }
+  &.md {
+    font-size: @fontSizeH6;
+    padding: @fontSizeH6/3 @fontSizeH6;
+    &.icons,
+    .icons  {
+      font-size: @fontSizeH6*.9;
+      padding: @fontSizeH6/2;
+    }
+  }
+  &.sm {
+    font-size: @fontSizeMd;
+    padding: @fontSizeMd/3 @fontSizeMd;
+    &.icons,
+    .icons  {
+      font-size: @fontSizeMd*.9;
+      padding: @fontSizeMd/2;
+    }
+  }
+  &.xs {
+    font-size: @fontSizeSm;
+    padding: @fontSizeSm/3 @fontSizeSm;
+    &.icons,
+    .icons {
+      font-size: @fontSizeSm*.9;
+      padding: @fontSizeSm/2;
+    }
+  }
+  //text+icon
+  .icons{
+    padding: 0 !important;
+    margin-right: 1rem;
+    position: relative;
+    top: .3rem;
+  }
+}

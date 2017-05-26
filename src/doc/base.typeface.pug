@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    include generic.header.pug
+  body
+    .app.doc
+      include generic.nav.pug
+      .grid
+        include generic.sidebar.pug
+        .col-md-9
+            .col-sm-12: h1 Typeface
+            .col-sm-12: h3 ubuntu Condensed (default typeface)
+            .col-sm-12: p.lg.ubuntu-condensed ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            .col-sm-12: p.lg.ubuntu-condensed abcdefghijklmnopqrstuvwxyz
+            .col-sm-12: p.lg.ubuntu-condensed 1234567890!@#$%^&*()
+            hr
+            .col-sm-12: h3 Abel (heading typeface)
+            .col-sm-12: p.lg ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            .col-sm-12: p.lg abcdefghijklmnopqrstuvwxyz
+            .col-sm-12: p.lg 1234567890!@#$%^&*()

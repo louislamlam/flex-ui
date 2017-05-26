@@ -1,0 +1,86 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: fade(@secondaryColor, 100%);
+  font-family: @secondaryFont;
+  text-transform: capitalize;
+  font-weight: bold;
+  line-height: 1;
+  width: 100%;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 3rem;
+  ~ p{
+    margin: -2rem 0 3rem;
+  }
+}
+
+h1 {
+  font-size: @fontSizeH1;
+}
+
+h2 {
+  font-size: @fontSizeH2;
+}
+
+h3 {
+  font-size: @fontSizeH3;
+}
+
+h4 {
+  font-size: @fontSizeH4;
+}
+
+h5 {
+  font-size: @fontSizeH5;
+}
+
+h6 {
+  font-size: @fontSizeH6;
+}
+
+a:not(.btn) {
+  color: @linkColor;
+  cursor: pointer;
+  // text-decoration: none;
+  &:hover {
+    color: darken(@linkColor, 10%);
+  }
+}
+
+p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  &.ubuntu-condensed {
+    font-family: 'Ubuntu Condensed';
+  }
+}
+
+pre {
+  color: @secondaryColor;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  background-color: fade(@primaryColor, 8%);
+  padding: 2rem;
+  margin: 0 0 2rem 0;
+  border-radius: 0;
+  overflow: auto;
+  code {
+    display: flex;
+  }
+}
+
+//generic font size class
+.lg {
+  font-size: @fontSizeH4;
+}
+.md{
+  font-size: @fontSizeMd;
+}
+.sm {
+  font-size: @fontSizeSm;
+}
+.xs {
+  font-size: @fontSizeXs;
+}

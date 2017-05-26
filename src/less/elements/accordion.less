@@ -1,0 +1,40 @@
+ul.accordion {
+  > li {
+    ul {
+      height: 0;
+      overflow: hidden;
+      transform: scaleY(.7);
+      transform-origin: top;
+      transition: transform 0.5s ease;
+      &:target {
+        height: auto;
+        transform: scaleY(1);
+      }
+    }
+  }
+  &.panel {
+    > li {
+      margin-bottom: 1px;
+      border: 1px solid @primaryColor;
+      > a {
+        color: #fff;
+        background-color: @primaryColor;
+        padding: 1rem;
+        display: block;
+        &:after {
+          font-size: 1.6rem;
+          content: 'keyboard_arrow_down';
+          position: relative;
+          top: 6px;
+          float: right;
+          &:extend(.icons);
+        }
+      }
+      ul {
+        &:target {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}

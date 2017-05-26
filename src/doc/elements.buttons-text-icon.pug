@@ -1,0 +1,39 @@
+- var t1 = "<a class='btn primary lg'><span class='icons'>face</span>large</a>";
+- var t2 = "<a class='btn secondary lg'><span class='icons'>face</span>large</a>";
+- var t3 = "<a class='btn primary md'><span class='icons'>face</span>medium</a>";
+- var t4 = "<a class='btn secondary md'><span class='icons'>face</span>medium</a>";
+- var t5 = "<a class='btn primary sm'><span class='icons'>face</span>small</a>";
+- var t6 = "<a class='btn secondary sm'><span class='icons'>face</span>small</a>";
+- var t7 = "<a class='btn primary xs'><span class='icons'>face</span>extra small</a>";
+- var t8 = "<a class='btn secondary xs'><span class='icons'>face</span>extra small</a>";
+
+
+doctype html
+html(lang="en")
+  head
+      include generic.header.pug
+  body
+    .app.doc
+      include generic.nav.pug
+      .grid
+        include generic.sidebar.pug
+        .col-xs-12.col-md-9
+          .col-xs-12.col-sm-12
+            h1 Text + Icon Buttons
+            p For more icon details, please visit 
+              a(href="https://material.io/icons/") Material Icon official website.
+          .col-xs-12.col-sm-12: h3 Primary Color
+          .grid: .col: pre
+            code #{t1}
+            code #{t2}
+            code #{t3}
+            code #{t4}
+          .grid: .col.center-v !{t1} !{t3} !{t5} !{t7}
+            hr
+          .col-xs-12.col-sm-12: h3 Secondary Color
+          .grid: .col: pre
+            code #{t5}
+            code #{t6}
+            code #{t7}
+            code #{t8}
+          .grid: .col.center-v !{t2} !{t4} !{t6} !{t8}

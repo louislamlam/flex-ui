@@ -1,0 +1,89 @@
+//background color
+.primary-bg{
+  background-color: @primaryColor;
+}
+.secondary-bg{
+  background-color: @secondaryColor;
+}
+.green-bg{
+  background-color: @green;
+}
+.blue-bg{
+  background-color: @blue;
+}
+.red-bg{
+  background-color: @red;
+}
+.purple-bg{
+  background-color: @purple;
+}
+.white-bg {
+  background-color: #fff;
+  border: 1px solid fade(@secondaryColor, 40%);
+}
+.grey-bg {
+  color: @secondaryColor;
+  background-color: fade(@secondaryColor, 10%);
+}
+
+//text alignment
+.text-center{
+  text-align: center;
+}
+
+//flexbox
+.center-v {
+  display: flex;
+  align-items: center;
+}
+
+.center-h {
+  display: flex;
+  justify-content: center;
+}
+
+.space-around{
+  display: flex;
+  justify-content: space-around;
+}
+//floating
+.right {
+  float: right;
+}
+
+.condensed {
+  font-family: 'Roboto Condensed';
+}
+
+.visible-xs {
+  display: none !important;
+  @media @breakpoint-xs {
+    display: flex !important;
+  }
+}
+
+.invisible-sm {
+  @media @breakpoint-sm {
+    display: none !important;
+  }
+}
+
+.invisible-md {
+  @media @breakpoint-md {
+    display: none !important;
+  }
+}
+
+.invisible-lg {
+  @media @breakpoint-lg {
+    display: none !important;
+  }
+}
+
+.circle{
+  height: 0;
+  width: 100%;
+  padding: 50% 0;
+  border-radius: 50%;
+  display: block;
+}

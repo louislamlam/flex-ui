@@ -1,0 +1,60 @@
+- var r1 = "<input type='radio' id='radio-1' name='selector'>";
+- var r2 = "<label for='radio-1'>radio 1</label>";
+- var r3 = "<input type='radio' id='radio-2' name='selector'>";
+- var r4 = "<label for='radio-2'>radio 2</label>";
+- var r5 = "<input type='radio' id='radio-3' name='selector'>";
+- var r6 = "<label for='radio-3'>radio 3</label>";
+- var r7 = "<input type='radio' id='radio-4' name='selector'>";
+- var r8 = "<label for='radio-4'>radio 4</label>";
+
+- var c1 = "<input type='checkbox' id='check-1'>";
+- var c2 = "<label for='check-1'>checkbox 1</label>";
+- var c3 = "<input type='checkbox' id='check-2'>";
+- var c4 = "<label for='check-2'>checkbox 2</label>";
+- var c5 = "<input type='checkbox' id='check-3'>";
+- var c6 = "<label for='check-3'>checkbox 3</label>";
+- var c7 = "<input type='checkbox' id='check-4'>";
+- var c8 = "<label for='check-4'>checkbox 4</label>";
+
+doctype html
+html(lang="en")
+  head
+      include generic.header.pug
+  body
+    .app.doc
+      include generic.nav.pug
+      .grid
+        include generic.sidebar.pug
+        .col-xs-12.col-sm-12.col-md-9: form
+          .col-xs-12.col-sm-12: h1 Radio & Checkbox
+          .col-xs-12.col-sm-12: h3 Radio button
+          .grid: .col: pre
+            code #{r1}
+            code #{r2}
+            code #{r3}
+            code #{r4}
+            code #{r5}
+            code #{r6}
+            code #{r7}
+            code #{r8}
+          .grid
+            .col-xs-12.col-sm-3: .col !{r1} !{r2}
+            .col-xs-12.col-sm-3: .col !{r3} !{r4}
+            .col-xs-12.col-sm-3: .col !{r5} !{r6}
+            .col-xs-12.col-sm-3: .col !{r7} !{r8}
+          hr
+          .col-xs-12.col-sm-12: h3 checkbox
+          .grid: .col: pre
+            code #{c1}
+            code #{c2}
+            code #{c3}
+            code #{c4}
+            code #{c5}
+            code #{c6}
+            code #{c7}
+            code #{c8}
+          .grid
+            .col-xs-12.col-sm-3: .col !{c1} !{c2}
+            .col-xs-12.col-sm-3: .col !{c3} !{c4}
+            .col-xs-12.col-sm-3: .col !{c5} !{c6}
+            .col-xs-12.col-sm-3: .col !{c7} !{c8}

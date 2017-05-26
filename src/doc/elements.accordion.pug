@@ -1,0 +1,69 @@
+- var a1 = "<ul class='accordion'>";
+- var a2 = "  <li><a href='#menu-1'>Menu 1 header</a>";
+- var a3 = "    <ul id='menu-1'>";
+- var a4 = "      <li>Menu 1 content</li>";
+- var a5 = "    </ul>";
+- var a6 = "  </li>";
+- var a7 = "  <li><a href='#menu-2'>Menu 2 header</a>";
+- var a8 = "    <ul id='menu-2'>";
+- var a9 = "      <li>Menu 2 content</li>";
+- var a10 = "    </ul>";
+- var a11 = "  </li>";
+- var a12 = "</ul>";
+
+- var p1 = "<ul class='accordion panel'>";
+- var p2 = "  <li><a href='#panel-1'>panel 1 header</a>";
+- var p3 = "    <ul id='panel-1'>";
+- var p4 = "      <li>panel 1 content</li>";
+- var p5 = "    </ul>";
+- var p6 = "  </li>";
+- var p7 = "  <li><a href='#panel-2'>panel 2 header</a>";
+- var p8 = "    <ul id='panel-2'>";
+- var p9 = "      <li>panel 2 content</li>";
+- var p10 = "    </ul>";
+- var p11 = "  </li>";
+- var p12 = "</ul>";
+
+
+doctype html
+html(lang="en")
+  head
+      include generic.header.pug
+  body
+    .app.doc
+      include generic.nav.pug
+      .grid
+        include generic.sidebar.pug
+        .col-xs-12.col-md-9.col-sm-12
+          .col-xs-12.col-sm-12: h1 accordion
+          .col-xs-12.col-sm-12: h3 Usage
+          .grid
+            .col-sm-9.col-xs-12: .col: pre
+              code #{a1}
+              code #{a2}
+              code #{a3}
+              code #{a4}
+              code #{a5}
+              code #{a6}
+              code #{a7}
+              code #{a8}
+              code #{a9}
+              code #{a10}
+              code #{a11}
+              code #{a12}
+            .col-sm-3.col-xs-12: .col !{a1} !{a2} !{a3} !{a4} !{a4} !{a5} !{a6} !{a7} !{a8} !{a9} !{a9} !{a10} !{a11} !{a12}
+          .grid
+            .col-sm-9.col-xs-12: .col: pre
+              code #{p1}
+              code #{p2}
+              code #{p3}
+              code #{p4}
+              code #{p5}
+              code #{p6}
+              code #{p7}
+              code #{p8}
+              code #{p9}
+              code #{p10}
+              code #{p11}
+              code #{p12}
+            .col-sm-3.col-xs-12: .col !{p1} !{p2} !{p3} !{p4} !{p4} !{p5} !{p6} !{p7} !{p8} !{p9} !{p9} !{p10} !{p11} !{p12}

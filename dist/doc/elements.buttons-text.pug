@@ -1,0 +1,36 @@
+- var b1 = "<a class='btn primary lg'>large</a>";
+- var b2 = "<a class='btn secondary lg'>large</a>";
+- var b3 = "<a class='btn primary md'>medium</a>";
+- var b4 = "<a class='btn secondary md'>medium</a>";
+- var b5 = "<a class='btn primary sm'>small</a>";
+- var b6 = "<a class='btn secondary sm'>small</a>";
+- var b7 = "<a class='btn primary xs'>extra small</a>";
+- var b8 = "<a class='btn secondary xs'>extra small</a>";
+
+
+doctype html
+html(lang="en")
+  head
+      include generic.header.pug
+  body
+    .app.doc
+      include generic.nav.pug
+      .grid
+        include generic.sidebar.pug
+        .col-xs-12.col-md-9
+          .col-xs-12.col-sm-12: h1 Text only Buttons
+          .col-xs-12.col-sm-12: h3 Primary Color
+          .grid: .col: pre
+            code #{b1}
+            code #{b2}
+            code #{b3}
+            code #{b4}
+          .grid: .col.center-v !{b1} !{b3} !{b5} !{b7}
+            hr
+          .col-xs-12.col-sm-12: h3 Secondary Color
+          .grid: .col: pre
+            code #{b5}
+            code #{b6}
+            code #{b7}
+            code #{b8}
+          .grid: .col.center-v !{b2} !{b4} !{b6} !{b8}

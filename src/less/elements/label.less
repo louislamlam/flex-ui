@@ -1,0 +1,36 @@
+a {
+  label {
+    margin-left: .5rem;
+  }
+}
+
+label {
+  color: #fff;
+  background-color: fade(@secondaryColor, 70%);
+  border-radius: .4rem;
+  &.hot {
+    background-color: fade(@hotColor, 70%);
+  }
+  &.normal {
+    background-color: fade(@normalColor, 70%);
+  }
+  &.cool {
+    background-color: fade(@coolColor, 70%);
+  }
+  &.lg {
+    font-size: @fontSizeH6;
+    padding: @fontSizeH6*.15 @fontSizeH6*.5;
+  }
+  &.md {
+    font-size: @fontSizeMd;
+    padding: @fontSizeMd*.15 @fontSizeMd*.5;
+  }
+  &.sm {
+    font-size: @fontSizeSm;
+    padding: @fontSizeSm*.15 @fontSizeSm*.5;
+  }
+  &.xs {
+    font-size: @fontSizeXs;
+    padding: @fontSizeXs*.15 @fontSizeXs*.5;
+  }
+}

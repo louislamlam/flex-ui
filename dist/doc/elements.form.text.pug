@@ -1,0 +1,45 @@
+- var f1 = "<input type='text' placeholder='I am a placeholder'/>";
+
+- var f2 = "<div class='input-group'>";
+- var f3 = " <input id='input-1' type='text' placeholder='I am a placeholder'/>"
+- var f4 = " <label for='input-1'>Text field label</label>"
+- var f5 = "</div>";
+
+- var f6 = "<div class='input-group'>";
+- var f7 = " <input id='input-1' type='text' placeholder='I am a placeholder'/>"
+- var f8 = " <label for='input-1' class='error'>Text field label</label>"
+- var f9 = " <label class='error'>This is an error message</label>";
+- var f10 = "</div>";
+
+doctype html
+html(lang="en")
+  head
+      include generic.header.pug
+  body
+    .app.doc
+      include generic.nav.pug
+      .grid
+        include generic.sidebar.pug
+        .col-xs-12.col-sm-12.col-md-9: form
+          .col-xs-12.col-sm-12: h1 Text Field
+          .col-xs-12.col-sm-12: h3 Default
+          .grid: .col: pre
+            code #{f1}
+          .grid: .col.center-v !{f1}
+            hr
+          .col-xs-12.col-sm-12: h3 With Label
+          .grid: .col: pre
+            code #{f2}
+            code #{f3}
+            code #{f4}
+            code #{f5}
+          .grid: .col.center-v !{f2} !{f3} !{f4} !{f5}
+            hr
+          .col-xs-12.col-sm-12: h3 Error Handling
+          .grid: .col: pre
+            code #{f6}
+            code #{f7}
+            code #{f8}
+            code #{f9}
+            code #{f10}
+          .grid: .col.center-v !{f6} !{f7} !{f8} !{f9} !{f10}

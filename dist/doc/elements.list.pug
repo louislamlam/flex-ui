@@ -1,0 +1,56 @@
+- var d1 = "<ul>";
+- var d2 = "  <li class='header'>List header</li>";
+- var d3 = "  <li>Sub list header";
+- var d4 = "    <ul>";
+- var d5 = "      <li>Sub list item</li>";
+- var d6 = "    </ul>";
+- var d7 = "  </li>";
+- var d8 = "  <li>List item</li>";
+- var d9 = "</ul>";
+
+- var c1 = "<ul>";
+- var c2 = "  <li class='header'>clickable list</li>";
+- var c3 = "  <li>default list item";
+- var c4 = "    <ul>";
+- var c5 = "      <li><a>Sub list header</a></li>";
+- var c6 = "    </ul>";
+- var c7 = "  </li>";
+- var c8 = "  <li><a>sub list item</a></li>";
+- var c9 = "</ul>";
+
+doctype html
+html(lang="en")
+  head
+      include generic.header.pug
+  body
+    .app.doc
+      include generic.nav.pug
+      .grid
+        include generic.sidebar.pug
+        .col-xs-12.col-md-9
+          .col-xs-12.col-sm-12: h1 List
+          .col-xs-12.col-sm-12: h3 Usage
+          .grid
+            .col-xs-12.col-md-8: .col: pre
+              code #{d1}
+              code #{d2}
+              code #{d3}
+              code #{d4}
+              code #{d5}
+              code #{d6}
+              code #{d7}
+              code #{d8}
+              code #{d9}
+            .col-xs-12.col-md-4: .col !{d1} !{d2} !{d8} !{d3} !{d4} !{d5} !{d5} !{d6} !{d7} !{d9}
+          .grid
+            .col-xs-12.col-md-8: .col: pre
+              code #{c1}
+              code #{c2}
+              code #{c3}
+              code #{c4}
+              code #{c5}
+              code #{c6}
+              code #{c7}
+              code #{c8}
+              code #{c9}
+            .col-xs-12.col-md-4: .col !{c1} !{c2} !{c8} !{c3} !{c4} !{c5} !{c5} !{c6} !{c7} !{c9}

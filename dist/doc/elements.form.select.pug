@@ -1,0 +1,63 @@
+- var s1 = "<div class='select-group'>";
+- var s2 = " <select>";
+- var s3 = "   <option value='item'>select an item</option>"
+- var s4 = " </select>"
+- var s5 = "</div>"
+
+- var s6 = "<div class='select-group'>";
+- var s7 = " <select id='select-1'>";
+- var s8 = "   <option value='item'>select an item</option>"
+- var s9 = " </select>"
+- var s10 = " <label for='select-1'>Select label</label>"
+- var s11 = "</div>"
+
+- var s12 = "<div class='select-group'>";
+- var s13 = " <select id='select-1'>";
+- var s14 = "   <option value='item'>select an item</option>"
+- var s15 = " </select>"
+- var s16 = " <label for='select-1'>Select label</label>"
+- var s17 = " <label class='error'>This is an error message</label>";
+- var s18 = "</div>"
+
+doctype html
+html(lang="en")
+  head
+      include generic.header.pug
+  body
+    .app.doc
+      include generic.nav.pug
+      .grid
+        include generic.sidebar.pug
+        .col-xs-12.col-sm-12.col-md-9: form
+          .col-xs-12.col-sm-12: h1 Select
+          .col-xs-12.col-sm-12: h3 Default
+          .grid: .col: pre
+            code #{s1}
+            code #{s2}
+            code #{s2}
+            code #{s3}
+          .grid: .col.center-v !{s1} !{s2} !{s3} !{s3} !{s3} !{s4} !{s5}
+            hr
+          .col-xs-12.col-sm-12: h3 with label
+          .grid: .col: pre
+            code #{s6}
+            code #{s7}
+            code #{s8}
+            code #{s8}
+            code #{s8}
+            code #{s9}
+            code #{s10}
+            code #{s11}
+          .grid: .col.center-v !{s6} !{s7} !{s8} !{s8} !{s8} !{s9} !{s10} !{s11}
+            hr
+          .col-xs-12.col-sm-12: h3 error handling
+          .grid: .col: pre
+            code #{s6}
+            code #{s7}
+            code #{s8}
+            code #{s8}
+            code #{s8}
+            code #{s9}
+            code #{s10}
+            code #{s11}
+          .grid: .col.center-v !{s12} !{s13} !{s14} !{s14} !{s14} !{s15} !{s16} !{s17} !{s18}

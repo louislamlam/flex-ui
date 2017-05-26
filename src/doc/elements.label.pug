@@ -1,0 +1,56 @@
+- var l1 = "<label class='hot lg'>large</label>";
+- var l2 = "<label class='hot md'>default</label>";
+- var l3 = "<label class='hot sm'>small</label>";
+- var l4 = "<label class='hot xs'>tiny</label>";
+
+- var l5 = "<label class='normal lg'>large</label>";
+- var l6 = "<label class='normal md'>default</label>";
+- var l7 = "<label class='normal sm'>small</label>";
+- var l8 = "<label class='normal xs'>tiny</label>";
+
+- var l9 = "<label class='cool lg'>large</label>";
+- var l10 = "<label class='cool md'>default</label>";
+- var l11 = "<label class='cool sm'>small</label>";
+- var l12 = "<label class='cool xs'>tiny</label>";
+
+
+doctype html
+html(lang="en")
+  head
+      include generic.header.pug
+  body
+    .app.doc
+      include generic.nav.pug
+      .grid
+        include generic.sidebar.pug
+        .col-xs-12.col-md-9
+          .col-xs-12.col-sm-12: h1 Text only Buttons
+          .col-xs-12.col-sm-12
+            h3 Hot Color
+            p Designed for urgent, high priority item.
+          .grid: .col: pre
+            code #{l1}
+            code #{l2}
+            code #{l3}
+            code #{l4}
+          .grid: .col.center-v !{l1} !{l2} !{l3} !{l4}
+            hr
+          .col-xs-12.col-sm-12
+            h3 Default Color
+            p Designed for general, medium priority item.
+          .grid: .col: pre
+            code #{l5}
+            code #{l6}
+            code #{l7}
+            code #{l8}
+          .grid: .col.center-v !{l5} !{l6} !{l7} !{l8}
+            hr
+          .col-xs-12.col-sm-12
+            h3 Cool Color
+            p Designed for tips, low priority item.
+          .grid: .col: pre
+            code #{l9}
+            code #{l10}
+            code #{l11}
+            code #{l12}
+          .grid: .col.center-v !{l9} !{l10} !{l11} !{l12}

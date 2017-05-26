@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  head
+    include generic.header.pug
+  body
+    .app.doc
+      include generic.nav.pug
+      .grid
+        include generic.sidebar.pug
+        .col-xs-12.col-sm-9
+          .col-sm-12
+            h1 color palettes
+          .grid
+            .col-xs-6.col-sm-3: .col.text-center
+              h5 Primary
+              .circle.primary-bg
+            .col-xs-6.col-sm-3: .col.text-center
+              h5 Secondary
+              .circle.secondary-bg
+            .col-xs-6.col-sm-3: .col.text-center
+              h5 green
+              .circle.green-bg
+            .col-xs-6.col-sm-3: .col.text-center
+              h5 blue
+              .circle.blue-bg
+            .col-xs-6.col-sm-3: .col.text-center
+              h5 purple
+              .circle.purple-bg
+            .col-xs-6.col-sm-3: .col.text-center
+              h5 red
+              .circle.red-bg
+            .col-xs-6.col-sm-3: .col.text-center
+              h5 white
+              .circle.white-bg
+            .col-xs-6.col-sm-3: .col.text-center
+              h5 grey
+              .circle.grey-bg

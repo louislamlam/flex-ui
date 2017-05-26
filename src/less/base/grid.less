@@ -1,0 +1,60 @@
+.column(@name; @columns; @index: 1) when (@index =< @columns) {
+  .column(@name; @columns; (@index + 1));
+  .grid {
+    .col-@{name}-@{index} {
+      width: (percentage(@index / @columns));
+      margin: 0 auto;
+      > .col {
+          flex: 1;
+          min-height: 4rem;
+          margin: @gutter;
+          // padding: @fontSize;
+        }
+    }
+  }
+}
+
+.grid {
+  margin: 0 @gutter;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  .grid{
+    margin: 0 -@gutter;
+  }
+  ~ .grid{
+    margin-top: @gutter;
+  }
+  > .col {
+    flex: 1;
+    margin: 0 @gutter;
+    overflow: hidden;
+    &:only-child{
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+@media @breakpoint-xs {
+  .column(xs; @columns);
+  // [class^="col-xs"]{
+  //   >.col{
+  //     margin: @gutter/2 !important;
+  //   }
+  // }
+}
+
+@media @breakpoint-sm {
+  .column(sm; @columns);
+}
+
+@media @breakpoint-md {
+  .column(md; @columns);
+}
+
+@media @breakpoint-lg {
+  .column(lg; @columns);
+}

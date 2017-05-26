@@ -1,0 +1,89 @@
+@navHeight: 50px;
+html {
+  font-size: @fontSize;
+}
+
+body {
+  color: fade(@secondaryColor, 60%);
+  font-family: @font;
+  font-size: @fontSizeMd;
+  line-height: 1.5;
+  margin: @gutter;
+}
+
+.app {
+  margin-top: @navHeight*2;
+  margin-bottom: @navHeight*2;
+}
+
+.doc {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav {
+  background-color: @primaryColor;
+  width: 100%;
+  height: @navHeight;
+  padding: 0 @gutter;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-shadow: 0 0 3px;
+  box-sizing: border-box
+}
+
+//sidebar
+.menu-toggle {
+  position: absolute;
+  appearance: none;
+  cursor: pointer;
+  left: -100%;
+  top: -100%;
+  + label {
+    background: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+    &:after {
+      content: 'menu';
+    }
+  }
+  &:checked {
+    + label {
+      &:after {
+        content: 'close';
+      }
+    }
+    ~ .sidebar {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.sidebar {
+  padding: @gutter*5 @gutter*2 @gutter*2 ;
+  background-color: #fff;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  box-shadow: 0 0 1px;
+  @media @breakpoint-lg {
+    padding: 0;
+    position: relative;
+    display: block;
+    transform: translateX(0);
+    box-shadow: 0 0 0;
+  }
+}

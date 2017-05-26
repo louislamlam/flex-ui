@@ -1,0 +1,64 @@
+- var h1 = "<h1>h1 I am a huge heading</h1>";
+- var h2 = "<h2>h2 I am a large heading</h2>";
+- var h3 = "<h3>h3 I am a medium heading</h3>";
+- var h4 = "<h4>h4 I am a moderate heading</h4>";
+- var h5 = "<h5>h5 I am a small heading</h5>";
+- var h6 = "<h6>h6 I am a tiny heading</h6>";
+
+- var p2 = "<p class='lg'>I am a large paragraphy</p>";
+- var p3 = "<p>I am a standard paragraphy</p>";
+- var p4 = "<p class='sm'>I am a small paragraphy</p>";
+- var p5 = "<p class='xs'>I am a tiny paragraphy</p>";
+
+- var a2 = "<a class='lg'>I am a large link</a>";
+- var a3 = "<a>I am a standard link</a>";
+- var a4 = "<a class='sm'>I am a small link</a>";
+- var a5 = "<a class='xs'>I am a tiny link</a>";
+
+doctype html
+html(lang="en")
+  head
+      include generic.header.pug
+  body
+    .app.doc
+      include generic.nav.pug
+      .grid
+        include generic.sidebar.pug
+        .col-sm-9.col-xs-12
+          .col-sm-12: h1 Typography
+          .col-sm-12: h3 Headings
+          .grid: .col: pre
+            code #{h1}
+            code #{h2}
+            code #{h3}
+            code #{h4}
+            code #{h5}
+            code #{h6}
+          .grid: .col !{h1} 
+          .grid: .col !{h2} 
+          .grid: .col !{h3} 
+          .grid: .col !{h4} 
+          .grid: .col !{h5} 
+          .grid: .col !{h6}
+            hr
+          .grid: .col: h3.offset Paragraphy
+          .grid: .col: pre
+            code #{p2}
+            code #{p3}
+            code #{p4}
+            code #{p5}
+          .grid: .col !{p2} 
+          .grid: .col !{p3} 
+          .grid: .col !{p4} 
+          .grid: .col !{p5}
+            hr
+          .grid: .col: h3.offset link
+          .grid: .col: pre
+            code #{a2}
+            code #{a3}
+            code #{a4}
+            code #{a5}
+          .grid: .col !{a2} 
+          .grid: .col !{a3} 
+          .grid: .col !{a4} 
+          .grid: .col !{a5}

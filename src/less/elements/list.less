@@ -1,0 +1,24 @@
+ul {
+  text-transform: capitalize;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 3rem;
+  -webkit-padding-start: 0;
+  list-style: none;
+  li.header {
+    &:extend(h5);
+    margin-bottom: 1rem;
+  }
+  li {
+    margin-bottom: .5rem;
+  }
+  ul {
+    // font-size: 1rem;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 1rem;
+    border-left: 1px solid fade(@secondaryColor, 20%);
+    li {
+      margin-bottom: 0;
+    }
+  }
+}
