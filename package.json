@@ -34,7 +34,7 @@
   "flexui-configs": {
     "directories": {
       "archive": "archive",
-      "dist": "dist",
+      "dist": "docs",
       "src": "src",
       "test": "test"
     }
