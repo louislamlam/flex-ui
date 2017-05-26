@@ -1,6 +1,7 @@
 @navHeight: 50px;
 html {
   font-size: @fontSize;
+  height: 100%;
 }
 
 body {
@@ -8,6 +9,7 @@ body {
   font-family: @font;
   font-size: @fontSizeMd;
   line-height: 1.5;
+  height: 100%;
   margin: @gutter;
 }
 
@@ -21,7 +23,11 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
+.homepage{
+  height: 100%;
+  margin: 0;
+  &:extend(.center-v);
+}
 .nav {
   background-color: @primaryColor;
   width: 100%;

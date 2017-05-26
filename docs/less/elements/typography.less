@@ -44,9 +44,10 @@ h6 {
 a:not(.btn) {
   color: @linkColor;
   cursor: pointer;
-  // text-decoration: none;
+  text-decoration: none;
+  &:extend(.animate);
   &:hover {
-    color: darken(@linkColor, 10%);
+    color: darken(@linkColor, 15%);
   }
 }
 
