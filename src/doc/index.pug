@@ -5,10 +5,38 @@ html(lang="en")
   body.homepage
     .app.doc
       include generic.nav.pug
-      .grid.center-h
-        img(src="img/logo-lg.png")
-      .grid.center-h
-        h1.center-h Simplicity . lightweight . Pure CSS
-        p Flex UI is a neat CSS framework based on CSS3 flexbox model.
-      .grid.center-h
-        a.btn.primary.lg(href="base.typeface.html") view documentation
+      .grid.text-center
+        .col-sm-12
+          .col-sm-12: .col: img(src="img/logo-lg.png")
+          .col-sm-12
+            h1.center-h Simplicity . lightweight . Pure CSS
+            p Flex UI is a neat CSS framework based on BEC method and CSS3 flexbox model.
+          .col-sm-12: a.btn.primary.lg(href="base.typeface.html") view demo
+      .grid.text-center
+        .col-sm-12
+          .col-sm-12
+            h1.center-h Folders + Layers = file structure 
+            p Naming convention matters. Give layers and symbols a production-ready name.
+          .col-sm-12: a(href="img/naming-comparison.png" target="_blank"): img(src="img/naming-comparison.png")
+          .col-sm-12.text-left
+            a(href="img/sketch.png" target="_blank"): img(src="img/sketch.png")
+            p.md Step 1. Pages & Blocks are named in UX design process.
+            p.md Step 2. Elements are named in UI design process.
+            p.md Step 3. Developers can reuse all layers, symbols name in their code.
+      hr
+      .grid.text-center
+        .col-sm-12
+          .col-sm-12
+            h1.center-h Base . Elements . Common
+            p Unlike the complex CSS methodologies, BEC is Simplified and designer-centric CSS method. It is designed for cross-team communication.
+          .col-sm-12: a(href="img/workflow.png" target="_blank"): img(src="img/workflow.png")
+          .col-sm-12: a(href="img/folders-structure.png" target="_blank"): img(src="img/folders-structure.png")
+      hr
+      .grid.text-center
+        .col-sm-12
+          .col-sm-12
+            h1.center-h Demo . Sample Code
+            p View framework demo and sample source code. Start design and coding in new way today.
+          .col-sm-12
+            a.btn.primary.lg(href="base.typeface.html") view demo
+            a.btn.primary.lg(href="base.typeface.html") source code

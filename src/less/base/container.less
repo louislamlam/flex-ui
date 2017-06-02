@@ -11,6 +11,37 @@ body {
   line-height: 1.5;
   height: 100%;
   margin: @gutter;
+  &.homepage {
+    margin: -@navHeight*2 0 0;
+    .doc {
+      height: 100%;
+      > .grid {
+        height: 100%;
+        padding: 0;
+        &:after {
+          content: "";
+          background-image: url("https://source.unsplash.com/daily");
+          background-size: cover;
+          opacity: 0.1;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
+          filter: grayscale(100%);
+        }
+        &:extend(.center-v);
+        ~ .grid {
+          height: auto;
+          padding: @gutter*6 @gutter;
+          &:after {
+            background: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 .app {
@@ -23,11 +54,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.homepage{
-  height: 100%;
-  margin: 0;
-  &:extend(.center-v);
-}
+
 .nav {
   background-color: @primaryColor;
   width: 100%;
